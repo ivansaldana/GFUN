@@ -7,7 +7,7 @@ body {
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; }
+  font-family: Arial Narrow; }
 
 .container {
   color: blanchedalmond;
@@ -17,4 +17,5 @@ body {
 .sub-cont {
   border: 0.5px solid white;
   border-radius: 20px;
-  margin: 1em; }
+  margin: 1em;
+  font-family: Aral Narrow; }
