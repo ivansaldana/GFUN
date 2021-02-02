@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Tekst Editor</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .editor {
+        min-width: 600px;
+        min-height: 400px;
+        border: 1px inset navy;
+      }
+      span.span-button {
+        display: inline-block;
+        border: outset 1px blue;
+        margin: 1em;
+        padding: 0.5em;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Editor</h1>
+    <div id="toolbar" class="toolbar">
+      <span class="span-button" id="select_span">Show selected</span>
+      <button type="button" class="btn command" data-command="h1">
+        selected
+      </button>
+    </div>
+    <div id="a_editor" class="editor" contenteditable="true"></div>
+    <hr />
+
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      contenteditable="true"
+    ></textarea>
+
+    <script>
+      var sel = {
+        selected_data: null,
+        text: null,
+      };
+
+      /*-------------------
+   event selection
+  -------------------*/
+
+      document
+        .querySelector(".span-button") //
+        .addEventListener("click", function (event) {
+          
+          let r = window.getSelection().getRangeAt(0);
+          console.log(r);
+          console.log(r.toString());
+        });
+    </script>
+  </body>
+</html>
