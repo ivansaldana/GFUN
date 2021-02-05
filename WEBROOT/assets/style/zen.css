@@ -6,8 +6,7 @@ body {
   background-repeat: no-repeat;
   /* Do not repeat the image */
   background-size: cover;
-  /* Resize the background image to cover the entire container */
-  font-family: Arial Narrow; }
+  /* Resize the background image to cover the entire container */ }
 
 .container {
   color: blanchedalmond;
@@ -19,3 +18,10 @@ body {
   border-radius: 20px;
   margin: 1em;
   font-family: Aral Narrow; }
+
+@font-face {
+  font-family: alarm_clock;
+  src: url("../../../zenclock/assets/fonts/alarm_clock.ttf"); }
+
+.clock {
+  font-family: alarm_clock; }
