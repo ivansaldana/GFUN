@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+      }
+      .compo-card {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #222;
+        max-width: 30%;
+        text-align: center;
+      }
+      .name {
+        background-color: purple;
+        color: white;
+        padding: 0.5em;
+      }
+      .omsch {
+        padding: 1em;
+        color: purple;
+      }
+      .actie-buttons {
+        display: flex;
+        justify-content: space-around;
+        padding: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="compo-card">
+        <div class="name">Form nieuwe component</div>
+        <div class="omsch">form voor het invoeren van een niuwe component.</div>
+        <div class="actie-buttons" data-id="0">
+          <button class="edit-compo" data-action="edit">Edit</button>
+          <button class="vieuw-compo" data-action="view">view</button>
+          <button class="del-compo" data-action="delete">Delete</button>
+        </div>
+      </div>
+
+      <div class="compo-card">
+        <div class="name">Form nieuwe component</div>
+        <div class="omsch">
+          form voor het invoeren van een nieuwe component.
+        </div>
+        <div class="actie-buttons" data-id="0">
+          <button class="edit-compo" data-action="edit">Edit</button>
+          <button class="vieuw-compo" data-action="view">view</button>
+          <button class="del-compo" data-action="delete">Delete</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

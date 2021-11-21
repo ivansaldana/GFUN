@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.vieuw {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        background-color: #7ea1c4;
+      }
+      form.html-code {
+        display: flex;
+        flex-direction: column;
+        background-color: aliceblue;
+      }
+      label {
+        color: #0e213b;
+      }
+      .actions-html {
+        margin: 1em;
+        display: flex;
+        justify-content: space-around;
+      }
+      button {
+        cursor: pointer;
+        border-radius: 5%;
+        padding: 0.5em;
+        margin: 0.5em;
+        border: #0e213b solid 1px;
+      }
+      button:hover {
+        background-color: rgb(244, 253, 122);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="post" class="html-code" id="html_compo">
+      <label for="titel-compo">TITEL COMPONENT</label>
+      <input type="text" name="CMP_NAME" required />
+      <label for="desc">Omschrijving Component</label>
+      <textarea name="CMP_DESC" cols="30" rows="2"></textarea>
+
+      <label for="id-cmp"
+        >ID COMPO (Deze id wordt gebruikt om deze component te genereren, dit is
+        ook de naam van de json en css file)</label
+      >
+      <input type="text" name="CMP_OBJ_ID" required />
+
+      <label for="html"
+        >HTML CODE (html code liever hier niet aanpassen - copy/paste vanuit
+        editor-)</label
+      >
+      <textarea name="html_area" cols="30" rows="10" required></textarea>
+      <label for="css">
+        CSS (css code liever niet hier aanpassen - copy/paste vanuit
+        editor)</label
+      >
+      <textarea name="css_area" cols="30" rows="10"></textarea>
+      <div class="actions-html">
+        <button class="save-btn" data-action="save">SAVE COMPONENT</button>
+
+        <button class="cancel-btn" data-action="cancel">CANCEL</button>
+      </div>
+    </form>
+  </body>
+</html>

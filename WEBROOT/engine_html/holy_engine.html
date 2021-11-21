@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(3, 3, 68);
+    }
+    header,
+    footer {
+      background-color: rgb(226, 226, 226);
+      height: 100px;
+    }
+    .sidebar-right {
+      background-color: blue;
+      color: white;
+    }
+    h1 {
+      color: red;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 1120px) {
+      .content-area {
+        display: flex;
+      }
+      .sidebar-left {
+        flex: 0 0 320px; /*  0  not grow  ||  0 won't shrink below specific width ||Â */
+        background-color: whitesmoke;
+        color: navy;
+      }
+    }
+    /* --------------------------------
+   START THE HEADER STYLE 
+   ----------------------------------*/
+    .site-header {
+      height: 100px;
+      display: flex;
+      flex-flow: column;
+    }
+    .site-info {
+      flex-grow: 1;
+    }
+    .site-info > h2 {
+      text-align: center;
+    }
+
+    /* --------------------------------
+   END THE HEADER STYLE 
+   ----------------------------------*/
+    .modal {
+      display: flex;
+      flex-direction: column;
+      /* Height & width depends on how you want to reveal the overlay (see JS below) */
+      height: 100%;
+      width: 0;
+      position: fixed;
+      /* Stay in place */
+      z-index: 10;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      background-color: rgb(115, 133, 158, 0.95);
+      /* Black fallback color */
+      /*background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+      overflow-x: hidden;
+      /* Disable horizontal scroll */
+      transition: 0.5s;
+      /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    .closebtn {
+      font-size: 64px;
+      margin: 0;
+      padding: 0;
+      padding-right: 0.5em;
+      text-decoration: none;
+      color: white;
+      align-self: flex-end;
+    }
+  </style>
+  <body>
+    <div class="outer-wrap">
+      <header class="site-header">
+        <div class="site-info">
+          <h2>Components and site builder</h2>
+        </div>
+        <nav class="main-menu">
+          <ul>
+            <li class="link-menu" data-action="home">
+              <i class="las la-border-all"></i>Home
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content-area">
+        <div class="sidebar-left">
+          <h2>APP-MODULE</h2>
+          <ul>
+            <li><a id="nieuwe_mod" href="#">New app-module</a></li>
+            <li><a id="browse_app" href="#">Browse app-module</a></li>
+          </ul>
+          <h2>PAGINAS</h2>
+          <ul>
+            <li><a id="nieuwe_pag" href="#">New webpagina</a></li>
+            <li><a id="browse_pags" href="#">Browse paginas</a></li>
+          </ul>
+          <h2>COMPONENTEN</h2>
+          <ul>
+            <li><a id="nieuwe_cat" href="#">New category</a></li>
+            <li><a id="browse_cats" href="#">Browse category's</a></li>
+            <li><a id="nieuwe_comp" href="#">New component</a></li>
+            <li><a id="show_compos" href="#">Show componenten</a></li>
+          </ul>
+          <div class="tree-view"></div>
+        </div>
+        <main class="main-conten-area">main content</main>
+      </div>
+      <footer class="site-footer">footer</footer>
+    </div>
+    <div class="modal">
+      <div class="modal-content">lkjhlgjkgdsfl</div>
+    </div>
+    <div id="html_code_wrapper" style="display: none"></div>
+  </body>
+</html>
